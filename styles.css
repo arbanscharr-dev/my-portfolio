@@ -170,10 +170,6 @@ i.text-dark:hover {
   92%, 100% { transform: translateY(-6.0em); }
 }
 
-.hero {
-    padding: 5rem;
-}
-
 .hero .hero-image {
   position: relative;
 }
