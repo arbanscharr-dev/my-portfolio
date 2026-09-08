@@ -1,0 +1,473 @@
+/* 1. Full-screen overlay curtain */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0b132b; /* Match your deep background theme */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Keeps it layered above all content */
+  transition: opacity 0.5s ease; /* For smooth fade out */
+}
+
+/* 2. Turning a square div into a spinning circle */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.1); /* Faint track ring */
+  border-top: 5px solid #f77f00; /* Vibrant accent color (like your orange) */
+  border-radius: 50%;
+  animation: spin 10s linear infinite; /* Spin endlessly */
+}
+
+/* 3. The continuous rotation engine */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --text-color: #e7f2f7;
+    --background-color: #141f26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.6;
+    color: #101a20;
+}
+
+.my-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-left: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+nav {
+    background-color: #f1efef;
+    opacity: 0.8;
+    padding: 1rem 0;
+    margin: 1rem 2rem;
+    border-radius: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+     border-bottom: 1px solid color-mix(in srgb, #e7f2f7, transparent 92%);
+}
+
+ul li.nav-item a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+ul li.nav-item a:not(.active):hover {
+    color: #0d6efd !important;
+}
+
+
+i.text-dark:hover {
+    color: #bec2c9 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px; 
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:not(.active):hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Container holding the scrolling list */
+.text-animation {
+  animation: slideWords 10s steps(4) infinite;
+  position: relative;
+}
+
+/* Optional: Add a blinking cursor effect right next to the words */
+.text-animation::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: var(--bs-primary);
+  animation: blinkCursor 0.8s infinite;
+}
+
+/* Keyframes to move the text up by exactly 1 line height per phrase */
+@keyframes slideWords {
+  0%, 20% { transform: translateY(0); }
+  25%, 45% { transform: translateY(-1.5em); }
+  50%, 70% { transform: translateY(-3.0em); }
+  75%, 95% { transform: translateY(-4.5em); }
+  100% { transform: translateY(-6.0em); }
+}
+
+/* Keyframes for the typewriter cursor blink */
+@keyframes blinkCursor {
+  50% { opacity: 0; }
+}
+
+/* 1. Updated Animation Property */
+.text-animation {
+  /* Removed 'steps(4)'. Changed to 'ease-in-out' for acceleration/deceleration */
+  animation: slideWordsSmooth 20s ease-in-out infinite;
+  position: relative;
+}
+
+/* 2. Keyframes with reading pauses */
+@keyframes slideWordsSmooth {
+  /* Word 1: UI/UX Designer */
+  0%, 20% { transform: translateY(0); } 
+  
+  /* Transition to Word 2 */
+  23%, 43% { transform: translateY(-1.5em); } 
+  
+  /* Transition to Word 3 */
+  46%, 66% { transform: translateY(-3.0em); } 
+  
+  /* Transition to Word 4 */
+  69%, 89% { transform: translateY(-4.5em); } 
+  
+  /* Smooth loop back to the first item */
+  92%, 100% { transform: translateY(-6.0em); }
+}
+
+.hero {
+    padding: 5rem;
+}
+
+.hero .hero-image {
+  position: relative;
+}
+
+.hero .hero-image .image-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.hero .hero-image .image-wrapper img {
+  border-radius: 20px;
+  box-shadow: 0 5px 15px color-mix(in srgb, #bec2c9, transparent 95%);
+  transition: transform 0.6s ease;
+}
+
+.hero .hero-image .image-wrapper img:hover {
+  transform: scale(1.02);
+}
+
+.my-btns {
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    font-weight: 500;
+}
+
+.my-btns.btn-primary:hover {
+    background-color: #0b5ed7 !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.my-btns.btn-outline-primary:hover {
+    background-color: transparent !important;
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: none !important;
+    border-radius: 50%;
+    display: flex;
+    border: 1px solid #0d6efd;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #0d6efd !important;
+    color: #fff;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+footer {
+    border-top: 1px solid color-mix(in srgb, #e7f2f7, transparent 92%);
+}
+
+.footer-social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e7f2f7;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    background: none !important;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+/* Base style for the scroll-to-top button */
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  background-color: #0d6efd; /* Bootstrap Primary Blue */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Perfect circle */
+  transition: all 0.4s ease-in-out;
+}
+
+.scroll-top i {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+/* Hover state override (keeps background blue, changes opacity slightly or lifts it) */
+.scroll-top:hover {
+  background-color: #0b5ed7; /* Darker blue button */
+  color: #ffffff;
+  transform: translateY(-3px); /* Subtle bounce effect */
+}
+
+/* This class will be toggled dynamically by JavaScript */
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+input, textarea {
+    background-color: transparent !important;
+    color: #e7f2f7 !important;
+    border: 1px solid #5a5a5a !important;
+    border-radius: 5px !important;
+    padding: 0.5rem !important;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5) !important;
+    outline: none !important;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #e7f2f7;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-form button {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+}
+
+.info-box {
+    background-color: #e7f2f7;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+/* The round outer box container holding the icon vector */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;          /* Makes the border frame a perfect circle */
+  border: 2px solid #5a5a5a;   /* Bootstrap text-primary blue layout border */
+  
+  /* FLEXBOX CENTERING SYNTAX */
+  display: flex;
+  align-items: center;         /* Centers the icon vector vertically */
+  justify-content: center;     /* Centers the icon vector horizontally */
+  
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: Reset the baseline height of Bootstrap Icon vectors */
+.icon-box .bi {
+  font-size: 22px;
+  line-height: 0;              /* Prevents native font line-spacing from pushing the icon downward */
+}
+
+
+.info-item .bi {
+  color: #5a5a5a !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-item:hover .bi {
+  color: #0d6efd !important;
+  transform: translateY(-3px);
+  transition: 0.3s ease-in-out;
+}
+
+.service-item {
+    background-color: #e7f2f7;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    gap: 4rem;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px color-mix(in srgb, #bec2c9, transparent 90%);
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover::before {
+    transform: scaleY(0.75);
+    transform-origin: bottom;
+}
+
+/* Filter Navigation Menu Styles */
+#portfolio-flters li {
+  cursor: pointer;
+  color: var(--text-color);
+  background: transparent;
+  border: 1px solid #5a5a5a;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.filter-active {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+  border-color: #0d6efd !important;
+}
+
+/* Specific Dark Mode overrides for the text tag borders */
+[data-theme="dark"] #portfolio-flters li {
+  border-color: #243b46;
+}
+
+/* Card Transitions */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--card-bg);
+  border: #5a5a5a !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-img-wrapper {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.project-img-wrapper img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img-wrapper img {
+  transform: scale(1.08); /* Modern subtle zoom on hover */
+}
+
+.skill-card {
+  border: 1px solid #5a5a5a !important;
+}
+
+.badge {
+  background-color: #e7f2f7;
+}
+
+.sitename {
+  font-family: 'Orbitron', sans-serif;
+}

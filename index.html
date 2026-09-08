@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+      <!-- Full-screen loading background -->
+    <div id="preloader">
+      <!-- The spinning visual element -->
+      <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-light p-3 sticky-top">
+      <div class="container-fluid">
+          <a href="index.html" class="navbar-brand text-muted my-logo"><span class="text-primary">A</span>rba<span class="text-primary">T</span>ech</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#betinahNavMenu" aria-controls="betinahNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="betinahNavMenu">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+              </ul>
+              <div class="col-md-4 ms-auto d-flex justify-content-end align-items-center">
+              <div class="header-social-links d-flex align-items-center gap-3">
+                  <a href="mailto:arbanscharr@gmail.com" class="facebook"><i class="bi bi-envelope text-dark fs-3"></i></a>
+                  <a href="https://wa.me/256709462590" class="whatsapp"><i class="bi bi-whatsapp text-dark fs-3"></i></a>
+                  <a href="tel:+256709462590" class="instagram"><i class="bi bi-telephone text-dark fs-3"></i></a>
+                  <a href="https://www.linkedin.com/in/shahar-shabanarbatech/" class="linkedin"><i class="bi bi-linkedin text-dark fs-3"></i></a>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </nav>
+    <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200" class="display-4">Hello, I'm <span class="text-primary">Shahar Shaban</span></h1>
+              <h2 class="d-flex align-items-center gap-2 m-0 fw-normal">Creative 
+                  <!-- The wrapper restricts visibility to exactly one line at a time -->
+                  <span class="overflow-hidden position-relative" style="height: 1.5em; line-height: 1.5em;">
+                    <ul class="list-unstyled text-primary text-animation m-0 p-0">
+                      <li>Full Stack Developer</li>
+                      <li>Software Engineer</li>
+                      <li>AI / ML Specialist</li>
+                      <li>Web Developer</li>
+                      <li>Full Stack Developer</li>
+                    </ul>
+                  </span>
+              </h2>
+              <p class="py-4">I design digital spaces from the ground up-architecting secure, high-performance back-ends while engineering clean, fluid user interfaces. Beyond standard web architecture, I leverage Python's data ecosystem to integrate machine learning and intelligent automated workflows right into production environments, turning raw data into interactive user experiences.</p>
+              <div class="ms-0 d-flex flex-column flex-sm-row gap-3">
+                <a href="#portfolio" class="btn btn-primary w-auto mx-3 my-btns">View My Work</a>
+                <a href="#contact" class="btn btn-outline-primary w-auto mx-3 my-btns">Get In Touch</a>
+              </div>
+              <div class="social-links d-flex align-items-center gap-3 mt-4">
+                <a href="tel:+256709462590"><i class="bi bi-telephone"></i></a>
+                <a href="https://www.linkedin.com/in/shahar-shabanarbatech/"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:arbanscharr@gmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="https://wa.me/256709462590"><i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+              <div class="image-wrapper">
+                <img src="images/my image.jpg" alt="Sarah Mitchell" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- Optimized About Me Component Block -->
+<div class="container about-content" data-aos="fade-up" id="about" data-aos-delay="200">
+  
+  <!-- Hook/Introduction -->
+  <div class="bio-header mb-4">
+    <h3 class="fw-bold text-primary mb-2">Creative Full-Stack Developer</h3>
+    <p class="lead fw-normal">Crafting seamless, high-performance user journeys through thoughtful code and clean interface architecture.</p>
+  </div>
+
+  <!-- Core Competencies Grid -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6 col-lg-4">
+      <div class="skill-card p-3 border rounded h-100">
+        <h5 class="fw-bold text-white mb-2"><i class="bi bi-layout-wtf me-2 text-primary"></i>UI/UX Architecture</h5>
+        <p class="text-muted small m-0">Designing accessible, user-centered digital environments with solid semantic structural layouts.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="skill-card p-3 border rounded h-100">
+        <h5 class="fw-bold text-white mb-2"><i class="bi bi-code-square me-2 text-primary"></i>Modern Frameworks</h5>
+        <p class="text-muted small m-0">Engineering highly scalable, modular script structures using modern libraries and native platforms.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="skill-card p-3 border rounded h-100">
+        <h5 class="fw-bold text-white mb-2"><i class="bi bi-phone me-2 text-primary"></i>Mobile-First Systems</h5>
+        <p class="text-muted small m-0">Optimizing cross-device layout performance so views adjust seamlessly from mobile to desktop sizes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Actions -->
+  <div class="action-buttons mt-5 d-flex gap-3">
+    <a href="#portfolio" class="btn btn-primary px-4 py-2 fw-semibold">View My Work</a>
+  </div>
+
+</div>
+
+
+    <section id="services" class="services section py-5">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="fw-bold text-center">Services Offered</h2>
+    <p class="text-muted text-center">Engineering robust digital experiences combining interactive frontend architecture, secure backend logic, and intelligent data systems.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center g-4 g-lg-5">
+
+      <!-- Service 1: Custom Web Development -->
+      <div class="col-md-6 service" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item p-4 rounded h-100 shadow-sm">
+          <div class="service-icon text-primary fs-2 mb-3">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <div class="service-content">
+            <h3 class="fw-semibold">Custom Web Development</h3>
+            <p class="text-muted">Building responsive, high-performance web applications from scratch. I craft semantic structures using HTML5 and implement fluid layouts via CSS3 and Bootstrap 5 to guarantee seamless views across all desktop and mobile devices.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: Intelligent AI & ML Solutions -->
+      <div class="col-md-6 service" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item p-4 rounded h-100 shadow-sm">
+          <div class="service-icon text-primary fs-2 mb-3">
+            <!-- Swapped to a brain/cpu icon for AI -->
+            <i class="bi bi-cpu"></i> 
+          </div>
+          <div class="service-content">
+            <h3 class="fw-semibold">Intelligent AI &amp; ML Solutions</h3>
+            <p class="text-muted">Leveraging Python's specialized data ecosystem to build intelligent workflows. I develop predictive systems, automate operations, and integrate customized Machine Learning or analytical models directly into interactive software platforms.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: Backend & API Engineering -->
+      <div class="col-md-6 service" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item p-4 rounded h-100 shadow-sm">
+          <div class="service-icon text-primary fs-2 mb-3">
+            <!-- Swapped to database icon -->
+            <i class="bi bi-database-gear"></i> 
+          </div>
+          <div class="service-content">
+            <h3 class="fw-semibold">Backend &amp; API Engineering</h3>
+            <p class="text-muted">Architecting the hidden engine of applications. Utilizing PHP and robust Java programming, I engineer reliable database schemas, handle secure data processing, and deploy clean APIs to ensure application stability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4: UI/UX Responsive Design -->
+      <div class="col-md-6 service" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item p-4 rounded h-100 shadow-sm">
+          <div class="service-icon text-primary fs-2 mb-3">
+            <i class="bi bi-palette2"></i>
+          </div>
+          <div class="service-content">
+            <h3 class="fw-semibold">UI/UX Responsive Design</h3>
+            <p class="text-muted">Designing intuitive user interfaces that focus on accessibility and modern aesthetics. I prioritize visual hierarchy, smooth interactive hover properties, and clean typography layouts to make digital interactions frictionless.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5: E-Commerce & Platform Solutions -->
+      <div class="col-md-6 service" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item p-4 rounded h-100 shadow-sm">
+          <div class="service-icon text-primary fs-2 mb-3">
+            <!-- Swapped to shop icon -->
+            <i class="bi bi-shop"></i> 
+          </div>
+          <div class="service-content">
+            <h3 class="fw-semibold">E-Commerce &amp; Platform Solutions</h3>
+            <p class="text-muted">Engineering secure digital marketplaces and multi-user web platforms. I write dynamic item filter functions in native JavaScript, setup interactive client-side components, and tie them into scalable operational structures.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <section id="portfolio" class="portfolio section py-5">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Featured Projects</h2>
+      <p class="text-muted">A collection of custom applications spanning full-stack architectures, data models, and software design.</p>
+    </div>
+
+    <!-- Smart Project Filters -->
+    <div class="row mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-12 d-flex justify-content-center">
+        <ul id="portfolio-flters" class="d-flex flex-wrap list-unstyled justify-content-center gap-3">
+          <li data-filter="*" class="filter-active px-3 py-1 text-primary rounded-pill text-uppercase small fw-bold">All</li>
+          <li data-filter=".filter-web" class="px-3 py-1 text-primary rounded-pill text-uppercase small fw-bold">Full-Stack Web</li>
+          <li data-filter=".filter-ai" class="px-3 py-1 text-primary rounded-pill text-uppercase small fw-bold">AI / Data Science</li>
+          <li data-filter=".filter-app" class="px-3 py-1 text-primary rounded-pill text-uppercase small fw-bold">Software/Java</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects Grid Container -->
+    <div class="row g-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- Project 1: YourShop Uganda (Full-Stack Web) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="card h-100 shadow-sm border overflow-hidden position-relative project-card">
+          <div class="project-img-wrapper position-relative">
+            <img src="images/yourshop.jpg" class="img-fluid w-100" alt="YourShop Uganda">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-primary-subtle text-primary align-self-start mb-2 rounded-pill px-2">Web Application</span>
+            <h4 class="fw-bold card-title mb-2">YourShop Uganda</h4>
+            <p class="text-muted small flex-grow-1">A campus e-commerce solution featuring reactive client-side product filtering designed with native JavaScript arrays and a backend PHP order pipeline.</p>
+            <div class="tech-tags d-flex flex-wrap gap-1 my-3">
+              <span class="badge text-dark small">HTML/CSS</span>
+              <span class="badge text-dark small">JavaScript</span>
+              <span class="badge text-dark small">PHP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Predictive Automation System (AI/Data Science) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+        <div class="card h-100 shadow-sm border overflow-hidden position-relative project-card">
+          <div class="project-img-wrapper position-relative">
+            <img src="images/de.jpg" class="img-fluid w-100" alt="Intelligent Data System">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-info-subtle text-info align-self-start mb-2 rounded-pill px-2">AI &amp; Data Science</span>
+            <h4 class="fw-bold card-title mb-2">Intelligent Data Engine</h4>
+            <p class="text-muted small flex-grow-1">An automated analytics tool built using Python to ingest regional metrics, train scikit-learn models, and output clear web-ready visualizations.</p>
+            <div class="tech-tags d-flex flex-wrap gap-1 my-3">
+              <span class="badge text-dark small ">Python</span>
+              <span class="badge text-dark small ">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Relational Table Manager (Java / Software) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="card h-100 shadow-sm border overflow-hidden position-relative project-card">
+          <div class="project-img-wrapper position-relative">
+            <img src="images/matrix.jpg" class="img-fluid w-100" alt="Java Enterprise Tool">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-dark-subtle text-primary align-self-start mb-2 rounded-pill px-2">Software Utility</span>
+            <h4 class="fw-bold card-title mb-2">Matrix Calculation Utility</h4>
+            <p class="text-muted small flex-grow-1">A robust object-oriented system developed in Java executing highly specific algorithmic array calculations and mapping clean data schemas safely.</p>
+            <div class="tech-tags d-flex flex-wrap gap-1 my-3">
+              <span class="badge text-dark small">Java SE</span>
+              <span class="badge text-dark small">Data Structures</span>
+              <span class="badge text-dark small">OOP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="contact section py-5">
+
+  <!-- Section Title -->
+  <div class="container col-8 offset-2 text-center section-title" data-aos="fade-up">
+    <h2 class="fw-bold">Contact</h2>
+    <p class="text-muted">Have a project in mind or looking to collaborate on custom web infrastructure, intelligent database systems, or automation features? Get in touch today.</p>
+  </div>
+
+  <div class="container call-sec" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4 g-lg-5">
+      
+      <!-- Left Side: Contact Information Card Grid -->
+      <div class="col-lg-5">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+          <h3>Contact Info</h3>
+          <p class="text-muted mb-4">Reach out via any of my active communication lines. I typically respond to enterprise design and programming queries within 24 hours.</p>
+
+          <div class="info-item d-flex gap-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box text-primary fs-3">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="content">
+              <h4 class="fw-semibold m-0">Our Location</h4>
+              <p class="m-0 text-muted">Kampala, Uganda</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex gap-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box text-primary fs-3">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div class="content">
+              <h4 class="fw-semibold m-0">Phone Number</h4>
+              <p class="m-0 text-muted">+256 709 462 590</p>
+            </div>
+          </div>
+
+          <!-- FIXED: Replaced invalid g-1 with gap-3 -->
+          <div class="info-item d-flex gap-3" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box text-primary fs-3">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="content">
+              <h4 class="fw-semibold m-0">Email Address</h4>
+              <!-- Tailored placeholder style for your brand profile -->
+              <p class="m-0 text-muted">arbanscharr@gmail.com</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Interactive Feedback Form Structure -->
+      <div class="col-lg-7">
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+          <h3>Get In Touch</h3>
+          <p class="text-muted mb-4">Fill out the secure messaging fields below to send a prompt notification right to my development environment.</p>
+
+          <!-- FIXED: Removed competing inner data-aos to stabilize animations -->
+          <form action="forms/contact.php" method="post" class="php-email-form">
+            <div class="row gy-4">
+
+              <!-- FIXED: Removed empty quotes on required fields -->
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="col-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="col-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <div class="loading d-none">Loading</div>
+                <div class="error-message d-none"></div>
+                <div class="sent-message d-none">Your message has been sent. Thank you!</div>
+
+                <!-- FIXED: Changed class="btn" to a visible styled Bootstrap class -->
+                <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+
+    <footer id="footer" class="footer p-4">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>&copy; <span>Copyright</span> <strong class="px-1 sitename text-muted"><span class="text-primary">A</span>rba<span class="text-primary">T</span>ech</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class=" footer-social-links d-flex align-items-center justify-content-center">
+        <a href="mailto:arbanscharr@gmail.com" class="mx-3 bg-primary"><i class="bi bi-envelope"></i></a>
+        <a href="https://wa.me/256709462590" class="mx-3 bg-primary"><i class="bi bi-whatsapp"></i></a>
+        <a href="tel:+256709462590" class="mx-3 bg-primary"><i class="bi bi-telephone"></i></a>
+        <a href="https://www.linkedin.com/in/shahar-shabanarbatech/" class=" bg-primary"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  </main>
+</body>
+</html>
